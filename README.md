@@ -1,1 +1,0 @@
-idus Coding Test

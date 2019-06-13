@@ -1,0 +1,53 @@
+body {
+  color: $font_color;
+
+  // Property Nesting
+  font: {
+    size: $font_size;
+    family: $font_family;
+  }
+
+  line-height: $line_height;
+}
+
+.rating {
+  float:left;
+  
+  &:not(:checked) {
+      
+      &> input {
+          position:absolute;
+          top:-9999px;
+          clip:rect(0,0,0,0);
+      }
+
+      &> label {
+          float:right;
+          width:1em;
+          padding:0 .1em;
+          overflow:hidden;
+          white-space:nowrap;
+          cursor:pointer;
+          font-size:200%;
+          line-height:1.2;
+          color:#ddd;
+      }
+
+      &> label:hover, label:hover ~ label {
+          color: gold;
+      }
+
+  }
+
+
+  &> input:checked ~ label {
+      color: gold;
+  }
+
+  &> label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+  }
+  
+}

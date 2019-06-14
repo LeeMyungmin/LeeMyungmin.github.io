@@ -66,7 +66,7 @@
                      <!--default상태, 입력중-->
                      <div class="area">
                         <textarea class="textbox-1" name="textbox1" rows="4" cols="100"  onkeyup="doCheck(this);" placeholder="초기값이 있을수 있습니다."></textarea>
-                        <input type="text" name="cnt" value=500 readonly>
+                        <input class="number" type="text" name="cnt" value=500 readonly>
                         <input type="submit" value="Save" class="button" id="button">
                      </div>
                     <!--비활성화-->
@@ -114,7 +114,7 @@
             }
 
             if (rbyte > total) {
-                alert("x");
+                alert("초과 입력할 수 없습니다.");
                 str2 = str.substr(0, rlen); //문자열 자르기
                 obj.value = str2;
                 doCheck(obj, total);
@@ -122,7 +122,7 @@
             
             //save 버튼 활성화
             if (chkCnt > 0) {
-                but.style.display='block'
+                but.style.display='inline-block'
             }
         }  
 

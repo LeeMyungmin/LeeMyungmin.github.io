@@ -313,19 +313,52 @@ body ul {
   display: block;
   width: 100%;
   height: 50px;
+  padding-right: 30px;
   margin-bottom: 10px;
+  resize: none;
 }
 
 .main .container .content-2 form {
-  width: 60%;
+  width: 40%;
 }
 
 .main .container .content-2 .area {
   position: relative;
 }
 
+.main .container .content-2 .area .number {
+  position: absolute;
+  bottom: 3px;
+  right: -30px;
+  width: 30px;
+  border: none;
+  text-align: center;
+  color: gainsboro;
+}
+
 .main .container .content-2 .button {
   display: none;
+  position: absolute;
+  height: 56px;
+  width: 60px;
+  top: 0px;
+  right: -100px;
+  border: 1px solid steelblue;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .main .container .content-2 form {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main .container .content-2 .button {
+    width: 38px;
+    right: -74px;
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
